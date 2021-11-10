@@ -45,6 +45,8 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                 Boolean checkPass = db.checkUserPass(password.getText().toString());
                 if (checkUser == true && checkPass == true){
                     startActivity(new Intent(SignIn.this,Initial.class));
+                }else{
+                    Toast.makeText(SignIn.this, "username atau password anda salah", Toast.LENGTH_SHORT).show();
                 }
             }
         }

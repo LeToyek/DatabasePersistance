@@ -11,7 +11,8 @@
         android:theme="@style/Theme.DatabasePersistance">
         <activity
             android:name=".Initial"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/NoActionBarTheme"/>
         <activity
             android:name=".Register"
             android:exported="true" />

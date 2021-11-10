@@ -39,7 +39,7 @@ public class Register extends AppCompatActivity {
         String fullName = etRegFullName.getText().toString();
         String school = etRegSchool.getText().toString();
 
-        Boolean checkInsertData = dbHelper.insertUserData(username,password,email,fullName,school,address);
+        Boolean checkInsertData = dbHelper.insertUserData(username,password,email,fullName,school,address,"","");
         if(checkInsertData == true){
             Toast.makeText(Register.this, "Account berhasil dibuat", Toast.LENGTH_SHORT).show();
         }else{
