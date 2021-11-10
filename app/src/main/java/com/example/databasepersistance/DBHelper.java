@@ -32,7 +32,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("email",email);
         contentValues.put("namalengkap",fullName);
         contentValues.put("Asalsekolah", school);
-        contentValues.put("Alamat",address);
+        contentValues.put("AlamatTinggal",address);
         long result = sqLiteDatabase.insert("Useraccount",null,contentValues);
         if(result == -1){
             return false;
