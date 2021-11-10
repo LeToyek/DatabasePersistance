@@ -40,4 +40,27 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;    
         }
     }
+    public Cursor getData(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("Select*from Useraccount",null);
+        return cursor;
+    }
+    public boolean checkUserPass(String password){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM Useraccount WHERE password = ?", new String []{password});
+        if (cursor.getCount()>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public boolean checkUserUsername(String username){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM Useraccount WHERE username = ?",new String[]{username});
+        if (cursor.getCount()>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

@@ -2,6 +2,7 @@ package com.example.databasepersistance;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,4 +46,5 @@ public class Register extends AppCompatActivity {
             Toast.makeText(Register.this, "Isi semua data dengan lengkap", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
